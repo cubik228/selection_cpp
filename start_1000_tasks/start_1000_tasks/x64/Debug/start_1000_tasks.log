@@ -1,0 +1,26 @@
+﻿  start_1000_tasks.cpp
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(8,15): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(19,22): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(23,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(24,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(35,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(36,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(45,17): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(51,18): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(56,18): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(57,24): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(59,32): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(66,23): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(70,17): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(77,18): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(83,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(87,15): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(96,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(114,53): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(118,63): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(122,29): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(126,26): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(130,38): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(134,39): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(138,27): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+  start_1000_tasks.vcxproj -> D:\Project\c++_pr\selection_cpp\start_1000_tasks\x64\Debug\start_1000_tasks.exe

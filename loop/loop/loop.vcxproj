@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="loop.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="help_func.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
