@@ -1,6 +1,55 @@
 ﻿  start_1000_tasks.cpp
-D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(82,18): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(88,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(92,15): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(101,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_one.h(57,26): warning C4244: return: преобразование "T_double" в "int", возможна потеря данных
+          with
+          [
+              T_double=double
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_one.h(68,30): warning C4244: return: преобразование "T_double" в "int", возможна потеря данных
+          with
+          [
+              T_double=double
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(9,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(13,15): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\start_1000_tasks.cpp(22,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_all.h(8,16): warning C4244: return: преобразование "double" в "T_double", возможна потеря данных
+          with
+          [
+              T_double=int
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_one.h(11,12): message : выполняется компиляция ссылки на экземпляр шаблон функции "T_double two_variables<int,int,area_square::<lambda_1>>(T_double,T_int,Function)"
+          with
+          [
+              T_double=int,
+              T_int=int,
+              Function=area_square::<lambda_1>
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_all.h(8,24): warning C4244: аргумент: преобразование "T_int" в "int", возможна потеря данных
+          with
+          [
+              T_int=double
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_one.h(57,13): message : выполняется компиляция ссылки на экземпляр шаблон функции "T_double two_variables<double,double,area_calculations::<lambda_1>>(T_double,T_int,Function)"
+          with
+          [
+              T_double=double,
+              T_int=double,
+              Function=area_calculations::<lambda_1>
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_all.h(8,17): warning C4244: аргумент: преобразование "T_double" в "int", возможна потеря данных
+          with
+          [
+              T_double=double
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_all.h(4,16): warning C4244: return: преобразование "double" в "T_int", возможна потеря данных
+          with
+          [
+              T_int=int
+          ]
+D:\Project\c++_pr\selection_cpp\start_1000_tasks\start_1000_tasks\template_two.h(14,13): message : выполняется компиляция ссылки на экземпляр шаблон функции "T_int three_variables_and_more<int,segment_length::<lambda_1>>(T_int,T_int,T_int,Function)"
+          with
+          [
+              T_int=int,
+              Function=segment_length::<lambda_1>
+          ]
   start_1000_tasks.vcxproj -> D:\Project\c++_pr\selection_cpp\start_1000_tasks\x64\Debug\start_1000_tasks.exe

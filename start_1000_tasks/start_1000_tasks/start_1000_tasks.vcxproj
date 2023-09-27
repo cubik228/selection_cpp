@@ -130,7 +130,10 @@
     <ClCompile Include="start_1000_tasks.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="template.h" />
+    <ClInclude Include="template_all.h" />
+    <ClInclude Include="template_one.h" />
+    <ClInclude Include="template_three.h" />
+    <ClInclude Include="template_two.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
