@@ -8,6 +8,6 @@ T_double two_variables(T_double first, T_int second, Function func) {
     return func(first, second);
 }
 template<typename T, class Function>
-T tasks_with_coordinates(T x1, T x2, T y1, T y2, T x3, T y3) {
+T tasks_with_coordinates(T x1, T x2, T y1, T y2, T x3, T y3, Function func) {
     return func(x1, x2, y1, y2, x3, y3);
 }

@@ -1,2 +1,18 @@
 ﻿  loop.cpp
-  loop.vcxproj -> D:\Project\c++_pr\selection_cpp\loop\x64\Debug\loop.exe
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(4,22): error C2065: length: необъявленный идентификатор
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(4,22): error C3861: length: идентификатор не найден
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(8,9): error C3861: result: идентификатор не найден
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(8,9): error C2065: result: необъявленный идентификатор
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(68,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(115,10): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(131,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(139,31): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(139,55): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(155,14): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(179,38): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(179,72): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(211,52): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(219,51): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(278,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(286,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(294,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных

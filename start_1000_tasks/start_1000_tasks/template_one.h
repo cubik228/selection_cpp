@@ -64,7 +64,7 @@ int degrees_v2(int degrees)///30
 }
 int linear_equationmain(double first,double second)///38
 {
-        return  two_variables(first, second, [](int first, int second) {return (-second) / first; });///38
+    return  two_variables(first, second, [](int first, int second) {return (-second) / first; });///38
 }
 int degrees_fahrenheit(int degrees_fahrenheit)///31
 {

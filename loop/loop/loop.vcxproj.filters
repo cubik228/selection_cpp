@@ -20,7 +20,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="help_func.h">
+    <ClInclude Include="template_all.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="solution_task_for.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
