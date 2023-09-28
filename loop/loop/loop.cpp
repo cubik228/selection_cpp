@@ -2,6 +2,12 @@
 #include <math.h>
 #include<memory>
 #include "solution_task_for.h"
+//void f1(int n, int k) {
+//	for (int i = 0; i < n; i++)
+//	{
+//		std::cout << k << std::endl;
+//	}
+//}
 void f2(int a, int b) {
 	int times = 0;
 	for (int i = 0; a <= b; a++, times++) {
@@ -308,5 +314,5 @@ void f40(int a, int b) {
 	}
 }
 int main() {
-	std::cout << three_variables_and_more(1, 4, 0, [](int acamulator, int value) {return acamulator + std::pow(value, 2); });//f11
+	std::cout<< N_times_number_K(1,10,5);
 }

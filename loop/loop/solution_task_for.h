@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "template_all.h"
-void f1(int fisrt, int second) ///1
+int N_times_number_K(int start, int end,int value) ///1
 {
-	three_variables(fisrt, second, 0, [](int fisrt, int second) { return 0; });///1
+	 return task_for(start, end, value, [](int start, int end, int value) { return value; });///1
 }

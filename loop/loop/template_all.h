@@ -1,9 +1,9 @@
 #pragma once
-template<typename T, class Function>
-T three_variables(T first, T second, T third, Function func) {
-	for (int i = 0; i < length; i++)
+template< class Function>
+int task_for(int start, int end,int result, Function func) {
+	for (; start < end; start++)
 	{
-		int result = func(first, second, third);
+		 result= func(start,end,result);
 	}
 	return result;
 }

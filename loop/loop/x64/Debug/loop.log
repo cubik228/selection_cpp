@@ -1,18 +1,21 @@
 ﻿  loop.cpp
-D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(4,22): error C2065: length: необъявленный идентификатор
-D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(4,22): error C3861: length: идентификатор не найден
-D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(8,9): error C3861: result: идентификатор не найден
-D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(8,9): error C2065: result: необъявленный идентификатор
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(68,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(115,10): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(131,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(139,31): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(139,55): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(155,14): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(179,38): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(179,72): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(211,52): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(219,51): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(278,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(286,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(294,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(67,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(114,10): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(130,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(138,31): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(138,55): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(154,14): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(178,38): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(178,72): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(210,52): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(218,51): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(277,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(285,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(293,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(6,16): error C2440: =: невозможно преобразовать "void" в "int"
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(6,16): message : Выражение, имеющее тип void, нельзя преобразовать в другой тип
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(6,10): message : выполняется компиляция ссылки на экземпляр шаблон функции "int task_for<N_times_number_K::<lambda_1>>(int,int,int,Function)"
+          with
+          [
+              Function=N_times_number_K::<lambda_1>
+          ]
