@@ -6,11 +6,8 @@
 int main()
 {
 	const int size = 11;
-	int arr[size];
-	std::vector<double>vector(size);
-	//fill_array_int(arr, size);
-	fill_array_double(vector, size);
-	//print_array(arr,size);
-	//std::cout<<sum_array(arr,size);
-	std::cout << proizvedenie_array(arr, size);
+	int arr_i[size];
+	double arr_d[size];
+	 fill_d(arr_d, size);
+	print_array(arr_d, size);
 }

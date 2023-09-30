@@ -1,5 +1,4 @@
 ﻿  array.cpp
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(11,2): error C2664: "void fill_array(int [],int)": невозможно преобразовать аргумент 1 из "std::vector<double,std::allocator<double>>" в "int []"
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(11,13): message : Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
-D:\Project\c++_pr\selection_cpp\array\array\fill_array.h(3,6): message : см. объявление "fill_array"
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(11,2): message : при попытке сопоставить список аргументов "(std::vector<double,std::allocator<double>>, const int)"
+D:\Project\c++_pr\selection_cpp\array\array\print_array.h(4,16): warning C4244: инициализация: преобразование "double" в "size_t", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array.cpp(9,6): warning C4101: arr_i: неиспользованная локальная переменная
+  array.vcxproj -> D:\Project\c++_pr\selection_cpp\array\x64\Debug\array.exe
