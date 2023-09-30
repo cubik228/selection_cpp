@@ -2,28 +2,8 @@
 #include <math.h>
 #include<memory>
 #include "solution_task_for.h"
-//void f1(int n, int k) {
-//	for (int i = 0; i < n; i++)
-//	{
-//		std::cout << k << std::endl;
-//	}
-//}
-void f2(int a, int b) {
-	int times = 0;
-	for (int i = 0; a <= b; a++, times++) {
-		std::cout << a << std::endl;
-	}
-	std::cout << "chisel vivelos=" << times << std::endl;
-}
-void f3(int a, int b) {
-	int times = 0;
-	b--;
-	for (; a < b; times++, b--)
-	{
-		std::cout << b << std::endl;
-	}
-	std::cout << "chisel vivelos=" << times << std::endl;
-}
+#include "help_func.h"
+
 void f4(double price) {
 	for (int i = 1; i <= 11; i++)
 	{
@@ -314,5 +294,7 @@ void f40(int a, int b) {
 	}
 }
 int main() {
-	std::cout<< N_times_number_K(1,10,5);
+	//std::cout<< N_times_number_K(1,10,5);///1
+	//std::cout << in_ascending_order(7,9);///2
+	std::cout << in_descending_order(3,9);///3
 }

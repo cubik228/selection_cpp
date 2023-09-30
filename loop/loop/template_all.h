@@ -1,9 +1,10 @@
 #pragma once
-template< class Function>
-int task_for(int start, int end,int result, Function func) {
+template< typename T ,class Function>
+T task_for(T start, T end,T result,T help_value, Function func) {
 	for (; start < end; start++)
 	{
-		 result= func(start,end,result);
+		 result = func(start,end,result);
+		// std::cout << result;
 	}
-	return result;
+	return help_value;
 }

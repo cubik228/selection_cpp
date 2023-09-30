@@ -130,6 +130,7 @@
     <ClCompile Include="loop.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="help_func.h" />
     <ClInclude Include="solution_task_for.h" />
     <ClInclude Include="template_all.h" />
   </ItemGroup>
