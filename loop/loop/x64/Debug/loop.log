@@ -1,16 +1,36 @@
 ﻿  loop.cpp
 D:\Project\c++_pr\selection_cpp\loop\loop\help_func.h(8,16): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(47,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(94,10): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(110,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(118,31): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(118,55): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(134,14): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(158,38): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(158,72): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(190,52): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(198,51): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(257,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(265,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\loop\loop\loop.cpp(273,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-  loop.vcxproj -> D:\Project\c++_pr\selection_cpp\loop\x64\Debug\loop.exe
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(35,92): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(43,92): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(63,97): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(67,98): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(71,115): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(71,147): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(75,91): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(79,106): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(83,129): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(119,92): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(6,18): warning C4244: аргумент: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=double
+          ]
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(87,9): message : выполняется компиляция ссылки на экземпляр шаблон функции "T task_for<double,sum_factorials_v4::<lambda_1>>(T,T,T,T,Function)"
+          with
+          [
+              T=double,
+              Function=sum_factorials_v4::<lambda_1>
+          ]
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(6,13): error C2064: результатом вычисления фрагмента не является функция, принимающая 3 аргументов
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(6,13): message : класс не определяет "operator()" или пользовательский оператор преобразования в указатель на функцию или ссылку на функцию, принимающий подходящее число аргументов
+D:\Project\c++_pr\selection_cpp\loop\loop\template_all.h(6,13): message : при попытке сопоставить список аргументов "(T, T, T)"
+          with
+          [
+              T=double
+          ]
+D:\Project\c++_pr\selection_cpp\loop\loop\solution_task_for.h(131,9): message : выполняется компиляция ссылки на экземпляр шаблон функции "T task_for<double,task_number_29::<lambda_1>>(T,T,T,T,Function)"
+          with
+          [
+              T=double,
+              Function=task_number_29::<lambda_1>
+          ]
