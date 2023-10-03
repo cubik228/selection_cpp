@@ -130,9 +130,9 @@
     <ClCompile Include="array.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="all_template.h" />
     <ClInclude Include="array_task.h" />
-    <ClInclude Include="fill_array.h" />
-    <ClInclude Include="print_array.h" />
+    <ClInclude Include="help_func.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
