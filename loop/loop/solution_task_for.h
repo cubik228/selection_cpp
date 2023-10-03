@@ -142,3 +142,21 @@ void  task_number_40(double start, double end) ///40
 {
 	std::cout << task_for(start, end, 0.0, 0.0, [](double start, double end, double sum) {for (int start = 0; start <= end; ++start) { for (int i = 1; i <= end - start + 1; i++) { return start + i - 1; } }});///40
 }
+void task_number_6(double price, double kg) ///6
+{
+	for (; kg <= 2; kg += 0.2)
+	{
+		std::cout << price * kg << std::endl;
+	}
+}
+void task_number_35(int a1, int a2, int a3)///35
+{
+	for (int i = 4; i < n; i++)
+	{
+		int ak = a3 + a2 - 2 * a1;
+		std::cout << ak << " ";
+		a1 = a2;
+		a2 = a3;
+		a3 = ak;
+	}
+}
