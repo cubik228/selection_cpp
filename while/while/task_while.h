@@ -122,14 +122,14 @@ int treasure_in_bank_v2(int percent) ///16
 	std::cout << start_distance << std::endl;
 	return days;
 }
-int task_number_17(int n)///17
+int task_number_17(int value)///17
 {
-	while (n > 0)
+	while (value > 0)
 	{
-		std::cout << n % 10 << " ";
-		n /= 10;
+		std::cout << value % 10 << " ";
+		value /= 10;
 	}
-	return n;
+	return value;
 }
 int sum_of_its_digits(int n)///18
 {
@@ -144,156 +144,145 @@ int sum_of_its_digits(int n)///18
 	std::cout << chislo << " ";
 	return res;
 }
-int task_number_19(int n)///19
+int task_number_19(int value)///19
 {
-	int k = 0;
-	while (n > 0)
+	int number = 0;
+	while (value > 0)
 	{
-		int a = n % 10;
-		k = k * 10 + a;
-		n /= 10;
+		int a = value % 10;
+		number = number * 10 + a;
+		value /= 10;
 	}
-	return k;
+	return number;
 }
-int check_for_number_2(int n)///20
+bool check_for_number_2(int value)///20
 {
-	while ((n > 0) && ((n % 10) != 2))
+	while ((value > 0) && ((value % 10) != 2))
 	{
-		n /= 10;
-		if ((n > 0) && (n % 10 == 2))
-			std::cout << "true";
-		else
-			std::cout << "false";
+		value /= 10;
+		if ((value > 0) && (value % 10 == 2))
+			return true;
+		
 	}
-	return 0;
+	return false;
 }
-int parity_check(int n) ///21
+bool parity_check(int value) ///21
 {
-	while ((n > 0) && ((n % 10) % 2 == 0))
-		n /= 10;
+	while ((value > 0) && ((value % 10) % 2 == 0))
+		value /= 10;
 	{
-		if ((n % 10) % 2 == 1)
-			std::cout << "true";
-		else
-			std::cout << "false";
+		if ((value % 10) % 2 == 1)
+			return true;
 	}
-	return 0;
+	return false;
 }
-int check_for_prime_number(int n)///22
+bool check_for_prime_number(int value)///22
 {
-	int k = 2;
-	while ((k < n - 1) && (n % k) != 0)
+	int number = 2;
+	while ((number < value - 1) && (value % number) != 0)
 	{
-		++k;
+		++number;
 	}
-	if ((n % k) != 0)
-		std::cout << "true";
+	if ((value % number) != 0)
+		return true;
+
+	return false;
+}
+ int node(int first, int second)///23
+{
+	if (second == 0)
+		return first;
+	else if (first > second)
+		return node(second, first % second);
 	else
-		std::cout << "false";
-	return 0;
+		return node(first, second % first);
 }
- int node(int a, int b)///23
+bool Fibonacci(int end)///24
 {
-	if (b == 0)
-		return a;
-	if (a > b)
-		return node(b, a % b);
-	else
-		return node(a, b % a);
-}
-int Fibonacci(int n)///24
-{
-	int i, y, z, b;
+	int  y, z, b;
 	y = z = b = 1;
-	bool q;
-	q = 0;
-	for (int i = 0; i < n; i++)
+	bool q = 0;
+	for (int i = 0; i < end; i++)
 	{
-		z = y;
-		y = b;
-		b = z + y;
-		if (b == n) { q = 1; }
+		int z = y;
+		int	y = b;
+		int b = z + y;
+		if (b == end) { q = 1; }
 	}
 	if (q)
-		std::cout << "true";
-	else
-		std::cout << "false";
-	return 0;
+		return true;
+
+	return false;
 }
-int first_Fibonacci_number(int n) ///25
+int first_Fibonacci_number(int value) ///25
 {
 	int a = 1, b = 1, c = 0;
-	while (c < n + 1)
+	while (c < value + 1)
 	{
 		c = a + b;
 		b = a;
 		a = c;
 	}
-	std::cout << c << std::endl;
-	return 0;
+	return c;
 }
-int task_number_26(int n) ///26
+void task_number_26(int value) ///26
 {
 	int a = 1, b = 1, c = 0;
-	while (c < n)
+	while (c < value)
 	{
 		c = a + b;
 		b = a;
 		a = c;
 	}
 	std::cout << b << " " << a + b << std::endl;
-	return 0;
-}int task_number_27(int n) ///27
+}
+int task_number_27(int end) ///27
 {
-	int a = 1, b = 1, c = 0, k = 2;
-	while (c < n)
+	int a = 1, b = 1, c = 0, count = 2;
+	while (c < end)
 	{
-		++k;
+		++count;
 		c = a + b;
 		b + a;
 		a = c;
 	}
-	std::cout << k << " ";
-	return 0;
+	return count;
 }
-void first_of_numbers_K(double e)///28
+void first_of_numbers_K(double number_to_check)///28
 {
-	double a1 = 0, ak = 1, k = 2;
+	double a1 = 0, ak = 1, count = 2;
 
-	while (abs(ak - a1) >= e)
+	while (abs(ak - a1) >= number_to_check)
 	{
 		a1 = ak;
 		ak = 2 + 1 / a1;
-		k++;
+		count++;
 	}
-	std::cout << "K= " << k << ", A(k-1)=" << a1 << ", A(k)=" << ak;
+	std::cout << "K= " << count << ", A(k-1)=" << a1 << ", A(k)=" << ak;
 }
-
-int first_of_numbers_K_v2(double e)///29
+void first_of_numbers_K_v2(double number_to_check)///29
 {
 	double ak1 = 1, ak = 2, ak2;
-	int k = 2;
-	while (fabs(ak - ak1) >= e) {
+	int count = 2;
+	while (fabs(ak - ak1) >= number_to_check) {
 		ak2 = ak1;
 		ak1 = ak;
 		ak = (ak2 + 2 * ak1) / 3;
-		++k;
+		++count;
 	}
-	std::cout << "k:" << k << std::endl << "A(k-1):" << ak1 << std::endl << "Ak:" << ak;
-	return 0;
+	std::cout << "k:" << count << std::endl << "A(k-1):" << ak1 << std::endl << "Ak:" << ak;
 }
-double number_of_squares(double a, double b, double c)///30
+double number_of_squares(double fisrt, double second, double third)///30
 {
-	int k = 0;
+	int count = 0;
 	float temp;
-	while ((a - c) >= 0) {
-		a -= c;
-		temp = b;
-		while (temp - c >= 0) {
-			temp -= c;
-			++k;
+	while ((fisrt - third) >= 0) {
+		fisrt  -= third;
+		temp = second;
+		while (temp - third >= 0) {
+			temp -= third;
+			++count;
 		}
-		std::cout << k;
-		return 0;
+		return count;
 	}
 }
