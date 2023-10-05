@@ -130,7 +130,6 @@
     <ClCompile Include="array.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="all_template.h" />
     <ClInclude Include="array_task.h" />
     <ClInclude Include="help_func.h" />
   </ItemGroup>

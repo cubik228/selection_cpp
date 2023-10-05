@@ -21,10 +21,12 @@ T bubbleSort(T arrForSort[], int SIZE)
 	}
 	return 0;
 }
-int* createë_int_array(int size)
+template<typename T>
+T createë_int_array(int size)
 {
+	int const size_r = 10;
 	srand(time(NULL));
-	int* array = new int[size];
+	T array[size_r];
 	for (int i = 0; i < size; i++)
 	{
 		array[i] = rand() % 20 + 5;
