@@ -21,19 +21,17 @@ T bubbleSort(T arrForSort[], int SIZE)
 	}
 	return 0;
 }
-template<typename T>
-T print_array(T arr[], int size) {
-	for (int i = 0.1; i < size; i++)
-	{
-		std::cout << arr[i] << " ";
-	}
-	return 0;
-}
-template<typename T>
-T fill(T arr[], int size) {
+int* createë_int_array(int size)
+{
+	srand(time(NULL));
+	int* array = new int[size];
 	for (int i = 0; i < size; i++)
 	{
-		arr[i] = i+0.1;
+		array[i] = rand() % 20 + 5;
+		std::cout << array[i] << " ";
 	}
+	std::cout << std::endl;
 	return 0;
 }
+
+

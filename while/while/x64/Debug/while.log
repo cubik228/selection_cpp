@@ -1,2 +1,9 @@
 ﻿  while.cpp
+D:\Project\c++_pr\selection_cpp\while\while\task_while.h(82,20): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\while\while\task_while.h(107,42): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\while\while\task_while.h(198,6): warning C4101: i: неиспользованная локальная переменная
+D:\Project\c++_pr\selection_cpp\while\while\task_while.h(242,5): warning C4552: "+": результат выражения не используется
+D:\Project\c++_pr\selection_cpp\while\while\task_while.h(278,10): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\while\while\task_while.h(280,12): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\while\while\task_while.h(286): warning C4715: wh30: значение возвращается не при всех путях выполнения
   while.vcxproj -> D:\Project\c++_pr\selection_cpp\while\x64\Debug\while.exe

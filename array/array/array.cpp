@@ -4,7 +4,8 @@
 int main()
 {
 	const int size = 11;
-	double arr_d[size];
-	fill(arr_d, size);
-	print_array(arr_d, size);
+	double* arr_d[size];
+	
+	//std::cout << sum_array(size);
+	std::cout<<sum_array(size);
 }

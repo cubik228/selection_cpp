@@ -129,6 +129,11 @@
   <ItemGroup>
     <ClCompile Include="while.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="task_while.h" />
+    <ClInclude Include="help_func.h" />
+    <ClInclude Include="template_all.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

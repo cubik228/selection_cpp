@@ -1,27 +1,18 @@
 #pragma once
 #include "help_func.h"
 #include "all_template.h"
-int sum_array(int arr[], int size,int i) {
-	return da_i_eby(arr, size, i, []() {return 0;});
-}
-int sum_array(int arr[],int size)///1
-{
+
+
+int sum_array(int size) {
+	int* arr = createë_int_array(size);
 	int sum = 0;
-	for (int i = 0; i < size; i++)
-	{
-		sum += arr[i];
+	for (int i = 0; i < size; i++) {
+		sum += *(arr + i);
 	}
+	delete[] arr;
 	return sum;
 }
-int  proizvedenie_array(int arr[], int size)///2
-{
-	int sum = 1;
-	for (int i = 1; i < size; i++)
-	{
-		sum *= arr[i];
-	}
-	return sum;
-}
+
 void ser3(double arr[], int size)///3
 {
 	

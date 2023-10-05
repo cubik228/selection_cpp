@@ -1,18 +1,17 @@
 ﻿  array.cpp
-D:\Project\c++_pr\selection_cpp\array\array\array_task.h(29,15): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\array_task.h(42,20): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\help_func.h(26,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(22,21): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(33,15): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(34,18): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(47,15): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(72,20): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array.cpp(7,10): warning C4101: arr_d: неиспользованная локальная переменная
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(12,14): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=double
           ]
-D:\Project\c++_pr\selection_cpp\array\array\array_task.h(100,2): message : выполняется компиляция ссылки на экземпляр шаблон функции "T bubbleSort<double>(T [],int)"
-          with
-          [
-              T=double
-          ]
-D:\Project\c++_pr\selection_cpp\array\array\help_func.h(26,16): warning C4244: инициализация: преобразование "double" в "size_t", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(10,2): message : выполняется компиляция ссылки на экземпляр шаблон функции "T print_array<double>(T [],int)"
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(193,2): message : выполняется компиляция ссылки на экземпляр шаблон функции "T bubbleSort<double>(T [],int)"
           with
           [
               T=double
