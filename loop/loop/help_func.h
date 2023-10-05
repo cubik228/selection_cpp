@@ -18,7 +18,7 @@ double Fact(int value)///zd_19
 	{
 		return value * Fact(value - 1);
 	}
-}
+}///
 int Fib(int n)///zd_33
 {
 	if (n == 0)
