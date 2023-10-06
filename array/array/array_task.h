@@ -1,6 +1,6 @@
 #pragma once
 #include "help_func.h"
-
+#include <algorithm>
 
 int sum_array( int arr[],int size) ///1
 {
@@ -32,7 +32,7 @@ double task_number_3(double arr[], int size)///3
 void task_number_4(double arr[], int size) ///4
 {
 	
-	int sum = 1;
+	int sum = 0;
 	int proizv = 1;
 	for (int i = 0; i < size; i++)
 	{
@@ -46,7 +46,7 @@ double task_number_5(double arr[], int size) ///5
 	int sum = 0;
 	for (int i = 0; i < size; i++)
 	{
-		double fraction = *(arr + i) - int(*(arr + i));
+		double fraction = *(arr + i) - floor(*(arr + i));
 		*(arr + i) = *(arr + i) - fraction;
 		std::cout << *(arr + i) << " ";
 		sum += *(arr + i);
@@ -77,18 +77,16 @@ double task_number_7(double arr[], int size) ///7
 	}
 	return sum;
 }
-double task_number_8(double arr[], int size) ///8
-{
-	int s = 0;
+double task_number_8(double arr[], int size) {
+	int count = 0;
 	for (int i = 0; i < size; i++) {
-		if (int(*(arr + i)) % 2 == 0) {
+		if (static_cast<int>(*(arr + i)) % 2 == 0) {
 			*(arr + i) *= 2;
 			std::cout << *(arr + i) << " ";
-			s++;
+			count++;
 		}
 	}
-	std::cout << std::endl;
-	return s;
+	return count;
 }
 double task_number_9(double arr[], int size) ///9
 {
@@ -199,6 +197,19 @@ void task_number_17(double arr[], int size, int value) ///17
 		}
 	}
 }
+void task_number_18(double arr[], int size, int value) {
+	bubbleSort(arr, size);
+	int j = 0;
+	for (int i = 0; i < size; ++i) {
+		if (i == 0 || *(arr + i) != *(arr + i- 1)) {
+			*(arr + j++) = *(arr + i);
+		}
+	}
+	size = j;
+	for (int i = 0; i < size; ++i) {
+		std::cout << *(arr + i) << " ";
+	}
+}
 void task_number_19(double arr[], int size, int value) ///19
 {
 	bubbleSort(arr, size);
@@ -209,4 +220,86 @@ void task_number_19(double arr[], int size, int value) ///19
 		}
 	}
 }
-
+void task_number_20(double arr[], int size) ///20
+{
+	int count = 0;
+	for (int i = 0; i < size - 1; i++) {
+		if (*(arr + i) < *(arr + i+ 1)) {
+			std::cout << *(arr + i) << " ";
+			count++;
+		}
+	}
+	std::cout << count;
+}
+bool task_number_21(double arr[], int size) ///21
+{
+	for (int i = 0; i < size - 1; i++) {
+		if ((*(arr + i) < *(arr + i + 1))) {
+			return true;
+		}
+	}
+	return false;
+}
+void task_number_22(double arr[], int size) ///22
+{
+	for (int i = 0; i < size - 1; i++) {
+		if ((*(arr + i) > *(arr + i + 1))) {
+			std::cout << "0";
+			break;
+		}
+		std::cout << *(arr + i);
+		break;
+	}
+}
+void task_number_23(double arr[], int size) ///23
+{
+	for (int i = 0; i < size - 1; i++) {
+		if ((*(arr + i) > *(arr + i + 1) && *(arr + i) > *(arr + i - 1)) || (*(arr + i) < *(arr + i + 1) && *(arr + i) < *(arr + i - 1)) ){
+			std::cout << "0" << std::endl;
+			break;
+		}
+		else
+		{
+			std::cout << *(arr + i);
+			break;
+		}
+	}
+}
+int sum_between_zeros(int size, int arr[])///24
+{
+	int sum = 0, last_zero = -1, second_last_zero = -1;
+	for (int i = 0; i < size; i++) {
+		if (*(arr + i) == 0) {
+			second_last_zero = last_zero;
+			last_zero = i;
+		}
+	}
+	if (second_last_zero == -1) {
+		return 0;
+	}
+	for (int i = second_last_zero + 1; i < last_zero; i++) {
+		sum += *(arr + i);
+	}
+	return sum;
+}
+int sum_between_zeros_v2(int size, int arr[]) ///25
+{
+	int sum = 0, first_zero = -1, last_zero = -1;
+	for (int i = 0; i < size; i++) {
+		if (*(arr + i) == 0) {
+			if (first_zero == -1) {
+				first_zero = i;
+			}
+			else {
+				last_zero = i;
+			}
+		}
+	}
+	if (first_zero == -1 || last_zero == -1) {
+		return 0;
+	}
+	for (int i = first_zero + 1; i < last_zero; i++) {
+		sum += *(arr + i);
+	}
+	return sum;
+}

@@ -21,19 +21,43 @@ T bubbleSort(T arrForSort[], int SIZE)
 	}
 	return 0;
 }
-template<typename T>
-T createë_int_array(int size)
+///********************************
+template <size_t N>
+void print_array(double(&arr)[N]) {
+	for (auto i : arr) {
+		std::cout << i << " ";
+	}
+}
+///********************************
+void print_array(double* arr, int size) {
+	for (int i = 0; i < size; ++i) {
+		std::cout << *(arr + i) << " ";
+	}
+}
+void createë_int_array(int size)
 {
 	int const size_r = 10;
 	srand(time(NULL));
-	T array[size_r];
+	int array[size_r];
 	for (int i = 0; i < size; i++)
 	{
 		array[i] = rand() % 20 + 5;
 		std::cout << array[i] << " ";
 	}
 	std::cout << std::endl;
-	return 0;
 }
+void createë_double_array(int size)
+{
+	int const size_r = 10;
+	srand(time(NULL));
+	double array[size_r];
+	for (int i = 0; i < size; i++)
+	{
+		array[i] = rand() % 20 + 5;
+		std::cout << array[i] << " ";
+	}
+	std::cout << std::endl;
+}
+
 
 

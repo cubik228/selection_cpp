@@ -1,5 +1,6 @@
 ﻿  array.cpp
-D:\Project\c++_pr\selection_cpp\array\array\help_func.h(27,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\help_func.h(40,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\help_func.h(52,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\array_task.h(28,24): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\array_task.h(39,10): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\array_task.h(40,13): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
