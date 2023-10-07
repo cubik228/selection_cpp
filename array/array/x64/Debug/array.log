@@ -11,7 +11,7 @@ D:\Project\c++_pr\selection_cpp\array\array\help_func.h(12,14): warning C4244: �
           [
               T=double
           ]
-D:\Project\c++_pr\selection_cpp\array\array\array_task.h(194,2): message : выполняется компиляция ссылки на экземпляр шаблон функции "T bubbleSort<double>(T [],int)"
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(192,2): message : выполняется компиляция ссылки на экземпляр шаблон функции "T bubbleSort<double>(T [],int)"
           with
           [
               T=double

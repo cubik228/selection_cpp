@@ -11,5 +11,6 @@ int main()
 	double arr[size] = {231,34,3,4,5,6,7,8,9,10};
 	//task_number_20(arr, size);
 	//std::cout<< task_number_21(arr, size);
-	task_number_22(arr, size);
+	//task_number_22(arr, size);
+	task_number_29(arr,size);
 }

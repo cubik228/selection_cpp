@@ -303,3 +303,34 @@ int sum_between_zeros_v2(int size, int arr[]) ///25
 	}
 	return sum;
 }
+void calculatePowers_v1(int arr[],int size ,int value) { ///26
+	for (int i = 0; i < size; i++) {
+		double result = pow(*(arr +i), value);
+		std::cout << "A" << i + 1 << "^" << value << " = " << result << std::endl;
+	}
+}
+void calculatePowers_v2(double arr[],int size ){///27
+	for (int i = 0; i < size; i++) {
+		if (i == size - 1) {
+			double result = pow(*(arr + i), size);
+			std::cout << "A" << i + 1 << "^" << size << " = " << result << std::endl;
+		}
+		else {
+			double result = pow(*(arr + i), i + 1);
+			std::cout << "A" << i + 1 << "^" << i + 1 << " = " << result << std::endl;
+		}
+	}
+}
+void calculatePowers(double arr[],int size) {///28
+	for (int i = 0; i < size; i++) {
+		double result = pow(*(arr + i), size - i);
+		std::cout << "A" << i + 1 << "^" << size - i << " = " << result << std::endl;
+	}
+}
+int calculateTotalSum(int K, int N, int arr[]) {///29s
+	int total_sum = 0;
+	for (int i = 0; i < K; i++) {
+		total_sum += sum(&*(arr +i), N);
+	}
+	return total_sum;
+}
