@@ -327,10 +327,165 @@ void calculatePowers(double arr[],int size) {///28
 		std::cout << "A" << i + 1 << "^" << size - i << " = " << result << std::endl;
 	}
 }
-int calculateTotalSum(int K, int N, int arr[]) {///29s
-	int total_sum = 0;
-	for (int i = 0; i < K; i++) {
-		total_sum += sum(&*(arr +i), N);
+double calculateTotalSum(int value, int N, double **arr) {///29
+	double total_sum = 0;
+	for (int i = 0; i < value; i++) {
+		total_sum += sum_dv(*(arr +i), N);
 	}
 	return total_sum;
+}
+void sum_of_elements(int value, int N, int **arr) {///30
+	for (int i = 0; i < value; i++) {
+		int sum = 0;
+		for (int j = 0; j < N; j++) {
+			sum += *(*(arr + i) + j);
+		}
+		std::cout << "Сумма элементов набора " << i + 1 << ": " << sum << std::endl;
+	}
+}
+int sum_of_elements_v2(int value, int N, int** arr) {///31
+	int coutn = 0;
+	for (int i = 0; i < value; i++)
+	{
+		for (int j = 0; j < N;j++) {
+			if (*(*(arr + i) + j) == 2) {
+				coutn++;
+			}
+		}
+	}
+	return coutn;
+}
+void task_number_32(int value, int N, int** arr) {///32
+	int coutn = 0;
+	for (int i = 0; i < value; i++) {
+		for (int j = 0; j < N; j++) {
+			if (*(*(arr + i) + j) == 2 || *(*(arr + i) + j) == 0) {
+				std::cout << *(*(arr + i) + j);
+				break;
+			}
+		}
+	}
+}
+void print_last_index(int value, int N, int** arr) {///33
+	for (int i = 0; i < value; i++) {
+		int last_index = 0;
+		for (int j = 0; j < N; j++) {
+			if (*(*(arr + i) + j) == 2) {
+				last_index = j + 1;
+			}
+		}
+		std::cout << "Номер последнего элемента равного 2 в наборе " << i + 1 << ": " << last_index << std::endl;
+	}
+}
+void print_last_index(int value, int N, int** arr) {///34
+	for (int i = 0; i < value; i++) {
+		int last_index = 0;
+		for (int j = 0; j < N; j++) {
+			if (*(*(arr + i) + j) == 2) {
+				std::cout<<sum_2d_array(arr, value, N);
+			}
+		}
+	}
+	std::cout << "0";
+}
+int count_elements_v1(int value, int N) {///35
+	int count = 0, sum = 0;
+	for (int i = 0; i < value; i++) {
+		int N;
+		while (N != 0) {
+			count++;
+		}
+		std::cout << count << std::endl;
+		sum += count;
+	}
+	return sum;
+}
+void count_elements_v2(int size_row, int** arr) {///36
+	int  sum = 0;
+	for (int i = 0; i < size_row; i++) {
+		int count = 0;
+		int prev = -1;
+		int curr = *(*(arr + i) + 0);
+		int j = 1;
+		while (curr != 0) {//проверка на нулевой элемент массива
+			if (prev < curr) {
+				count++;
+			}
+			prev = curr;
+			curr = *(*(arr + i) + j);
+			j++;
+		}
+		if (count == 0) {
+			continue;
+		}
+		std::cout << count << std::endl;
+		sum += 1;
+	}
+	std::cout << "Total number of sets: " << sum << std::endl;
+}
+void count_elements_v3(int size_row, int** arr) {///37
+		int  sum = 0, curr;
+		for (int i = 0; i < size_row; i++) {
+			int count = 0, prev = -1, j = 1;
+			curr = *(*(arr + i) + 0);
+			while (curr != 0) {
+				if (prev < curr) {
+					count++;
+				}
+				else if (prev > curr) {
+					count--;
+				}
+				prev = curr;
+				curr = *(*(arr + i) + j);
+				j++;
+			}
+			if (count == 0) {
+				continue;
+			}
+			std::cout << count << std::endl;
+			sum += 1;
+		}
+		std::cout<< sum << std::endl;
+}
+int count_elements_v4(int k, int** arr) {///38
+	int  sum = 0;
+	for (int i = 0; i < k; i++) {
+		int count = 0, prev = -1, j = 1;
+		int curr = *(*(arr + i) + 0);
+		while (curr != 0) {
+			if (prev < curr) {
+				count++;
+			}
+			else if (prev > curr) {
+				count--;
+			}
+			prev = curr;
+			curr = *(*(arr + i) + j);
+			j++;
+		}
+		return count;
+	}
+}
+int countSawtooths_v1(int value) {///39
+	int   count =0 ;
+	for (int i = 0; i < value; i++) {
+		int  cur = 0;
+		while (value != 0) {
+			int prev = cur, cur = value;
+			if ((prev < cur && cur > value) || (prev > cur && cur < value)) {
+				count++;
+			}
+		}
+	}
+	return count;
+}
+int countSawtooths_v2(int arr[], int size) {///40
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		int  cur = *(arr + i), prev = cur;
+		if (i > 1 && ((prev < cur && cur > *(arr + (i - 2))) || (prev > cur && cur < *(arr + (i - 2))))) {
+			count++;
+		}
+	}
+	return count;
 }

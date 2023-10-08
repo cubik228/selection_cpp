@@ -65,5 +65,21 @@ int sum(int arr[], int size) {
 	}
 	return result;
 }
-
-
+///*****************************
+double sum_dv(double* arr, int N) {
+	double total_sum = 0;
+	for (int i = 0; i < N; i++) {
+		total_sum += arr[i];
+	}
+	return total_sum;
+}
+///*****************************
+int sum_2d_array(int** arr, int rows, int cols) {
+	int sum = 0;
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			sum += *(*(arr + i) + j);
+		}
+	}
+	return sum;
+}
