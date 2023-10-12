@@ -284,16 +284,26 @@ T sawtooth_check(T arr, int size) {//23
 	return 0;
 }
 template<typename T>
-T sum_between_zeros( T arr,int size)///24
+ double sum_between_zeros( T arr,int size)///24
 {
 	double sum = 0, last_zero = -1, second_last_zero = -1;
-	for (int i = 0; i < size; i++) {
+	for (int i = size - 1; i >= 0; i--) {
 		if (*(arr + i) == 0) {
-			second_last_zero = last_zero;
-			last_zero = i;
+			if (last_zero == -1)
+			{
+				last_zero = i;
+			}
+			else
+			{
+				second_last_zero = i;
+				break;
+			}
 		}
 	}
-	if (second_last_zero == -1) {
+	if (second_last_zero == -1 || last_zero == -1) {
+		return -1;
+	}
+	if (last_zero == second_last_zero +1) {
 		return 0;
 	}
 	for (int i = second_last_zero + 1; i < last_zero; i++) {
@@ -353,7 +363,7 @@ double calculateTotalSum(T** arr,int value, int N) {///29
 	return total_sum;
 }
 template<typename T>
-void sum_of_elements(T** arr,int row, int col) {///30
+void sum_of_elements(T** arr, int row, int col) {///30
 	for (int i = 0; i < row; i++) {
 		int sum = 0;
 		for (int j = 0; j < col; j++) {

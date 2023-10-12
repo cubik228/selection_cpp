@@ -69,7 +69,7 @@ int sum(int arr[], int size) {
 double sum_dv(double* arr, int N) {
 	double total_sum = 0;
 	for (int i = 0; i < N; i++) {
-		total_sum += arr[i];
+		total_sum += *(arr + i);
 	}
 	return total_sum;
 }
@@ -86,15 +86,15 @@ int sum_2d_array(int** arr, int rows, int cols) {
 template<typename T>
 void fill_dinamic_array(T **arr,int size) {
 	for (T i = 0; i < size; i++) {
-		arr[i] = i;
-		std::cout << arr[i] << " ";
+		*(arr + i) = i;
+		std::cout << *(arr + i) << " ";
 	}
 }
 void fill_array(int** arr, int row, int col) {
 	srand(time(NULL));
 	for (int i = 0; i < row; i++) {
 		for (int j = 0; j < col; j++) {
-			arr[i][j] = rand() % 100 + 1;
+			*(*(arr + i) + j) = rand() % 100 + 1;
 		}
 	}
 }
@@ -102,14 +102,14 @@ void fill_array(int** arr, int row, int col) {
 void print_array(int** arr, int row, int col) {
 	for (int i = 0; i < row; i++) {
 		for (int j = 0; j < col; j++) {
-			std::cout << arr[i][j] << " ";
+			std::cout << *(*(arr + i) + j) << " ";
 		}
 		std::cout << std::endl;
 	}
 }
 void delete_array(int** arr, int row) {
 	for (int i = 0; i < row; i++) {
-		delete[] arr[i];
+		delete[] * (arr + i);
 	}
 	delete[] arr;
 }
