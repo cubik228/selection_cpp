@@ -83,3 +83,33 @@ int sum_2d_array(int** arr, int rows, int cols) {
 	}
 	return sum;
 }
+template<typename T>
+void fill_dinamic_array(T **arr,int size) {
+	for (T i = 0; i < size; i++) {
+		arr[i] = i;
+		std::cout << arr[i] << " ";
+	}
+}
+void fill_array(int** arr, int row, int col) {
+	srand(time(NULL));
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			arr[i][j] = rand() % 100 + 1;
+		}
+	}
+}
+
+void print_array(int** arr, int row, int col) {
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			std::cout << arr[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+}
+void delete_array(int** arr, int row) {
+	for (int i = 0; i < row; i++) {
+		delete[] arr[i];
+	}
+	delete[] arr;
+}

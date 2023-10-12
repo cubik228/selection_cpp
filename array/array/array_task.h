@@ -333,45 +333,41 @@ void calculatePowers_v1(T arr,int size ,int value) { ///26
 template<typename T>
 void calculatePowers_v2(T arr,int size ){///27
 	for (int i = 0; i < size; i++) {
-		if (i == size - 1) {
-			double result = pow(*(arr + i), size);
-			std::cout << "A" << i + 1 << "^" << size << " = " << result << std::endl;
-		}
-		else {
-			double result = pow(*(arr + i), i + 1);
-			std::cout << "A" << i + 1 << "^" << i + 1 << " = " << result << std::endl;
-		}
+			*(arr + i ) = pow(*(arr + i), i);
+			std::cout  << *(arr + i) << std::endl;
 	}
 }
 template<typename T>
 void calculatePowers(T arr,int size) {///28
 	for (int i = 0; i < size; i++) {
-		double result = pow(*(arr + i), size - i);
-		std::cout << "A" << i + 1 << "^" << size - i << " = " << result << std::endl;
+		 *(arr + i) = pow(*(arr + i), size - i);
+		std::cout << *(arr + i) << std::endl;
 	}
 }
-
-double calculateTotalSum(int value, int N, double **arr) {///29
+template<typename T>
+double calculateTotalSum(T** arr,int value, int N) {///29
 	double total_sum = 0;
 	for (int i = 0; i < value; i++) {
 		total_sum += sum_dv(*(arr +i), N);
 	}
 	return total_sum;
 }
-void sum_of_elements(int value, int N, int **arr) {///30
-	for (int i = 0; i < value; i++) {
+template<typename T>
+void sum_of_elements(T** arr,int row, int col) {///30
+	for (int i = 0; i < row; i++) {
 		int sum = 0;
-		for (int j = 0; j < N; j++) {
+		for (int j = 0; j < col; j++) {
 			sum += *(*(arr + i) + j);
 		}
-		std::cout << "Сумма элементов набора " << i + 1 << ": " << sum << std::endl;
+		std::cout  << i + 1 << ": " << sum << std::endl;
 	}
 }
-int sum_of_elements_v2(int value, int N, int** arr) {///31
+template<typename T>
+int sum_of_elements_v2(T** arr,int row, int col) {///31
 	int coutn = 0;
-	for (int i = 0; i < value; i++)
+	for (int i = 0; i < row; i++)
 	{
-		for (int j = 0; j < N;j++) {
+		for (int j = 0; j < col;j++) {
 			if (*(*(arr + i) + j) == 2) {
 				coutn++;
 			}
@@ -379,10 +375,11 @@ int sum_of_elements_v2(int value, int N, int** arr) {///31
 	}
 	return coutn;
 }
-void check_for_number_2(int value, int N, int** arr) {///32
+template<typename T>
+void check_for_number_2(T** arr,int row, int col) {///32
 	int coutn = 0;
-	for (int i = 0; i < value; i++) {
-		for (int j = 0; j < N; j++) {
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
 			if (*(*(arr + i) + j) == 2 || *(*(arr + i) + j) == 0) {
 				std::cout << *(*(arr + i) + j);
 				break;
@@ -390,42 +387,46 @@ void check_for_number_2(int value, int N, int** arr) {///32
 		}
 	}
 }
-void print_last_index(int value, int N, int** arr) {///33
-	for (int i = 0; i < value; i++) {
+template<typename T>
+void print_last_index(T** arr,int row, int col) {///33
+	for (int i = 0; i < row; i++) {
 		int last_index = 0;
-		for (int j = 0; j < N; j++) {
+		for (int j = 0; j < col; j++) {
 			if (*(*(arr + i) + j) == 2) {
 				last_index = j + 1;
 			}
 		}
-		std::cout << "Номер последнего элемента равного 2 в наборе " << i + 1 << ": " << last_index << std::endl;
+		std::cout <<  i + 1 << ": " << last_index << std::endl;
 	}
 }
-void print_last_index_v2(int value, int N, int** arr) {///34
-	for (int i = 0; i < value; i++) {
-		int last_index = 0;
-		for (int j = 0; j < N; j++) {
+template<typename T>
+int print_last_index_v2(T** arr,int row, int col) {///34
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
 			if (*(*(arr + i) + j) == 2) {
-				std::cout<<sum_2d_array(arr, value, N);
+				std::cout<<sum_2d_array(arr, row, col);
 			}
 		}
 	}
-	std::cout << "0";
+	return 0;
 }
-int count_elements_v1(int value, int N) {///35
-	int count = 0, sum = 0;
-	for (int i = 0; i < value; i++) {
-		while (N != 0) {
-			count++;
+template<typename T>
+void count_elements_v1(T** arr,int row, int col) {///35
+	for (int i = 0; i < row; i++) {
+		int count = 0;
+		for (int j = 0; j < col; j++) {
+			if (*(*(arr + i) + j) != 0) {
+				count++;
+			}
 		}
-		std::cout << count << std::endl;
-		sum += count;
+		std::cout << i + 1 <<": " << count << std::endl;
 	}
-	return sum;
+	std::cout << "Total number : " << row * col << std::endl;
 }
-void count_elements_v2(int size_row, int** arr) {///36
+template<typename T>
+void count_elements_v2(int row, T** arr) {///36
 	int  sum = 0;
-	for (int i = 0; i < size_row; i++) {
+	for (int i = 0; i < row; i++) {
 		int count = 0;
 		int prev = -1;
 		int curr = *(*(arr + i) + 0);
@@ -444,13 +445,16 @@ void count_elements_v2(int size_row, int** arr) {///36
 		std::cout << count << std::endl;
 		sum += 1;
 	}
-	std::cout << "Total number of sets: " << sum << std::endl;
+	std::cout  << sum << std::endl;
 }
-void count_elements_v3(int size_row, int** arr) {///37
-		int  sum = 0, curr;
-		for (int i = 0; i < size_row; i++) {
-			int count = 0, prev = -1, j = 1;
-			curr = *(*(arr + i) + 0);
+template<typename T>
+void count_elements_v3(int row, T** arr) {///37
+		int  sum ;
+		for (int i = 0; i < row; i++) {
+			int count = 0;
+			int prev = -1;
+			int j = 1;
+			int curr = *(*(arr + i) + 0);
 			while (curr != 0) {
 				if (prev < curr) {
 					count++;
@@ -470,9 +474,10 @@ void count_elements_v3(int size_row, int** arr) {///37
 		}
 		std::cout<< sum << std::endl;
 }
-int count_elements_v4(int k, int** arr) {///38
+template<typename T>
+int count_elements_v4(int row, T** arr) {///38
 	int  sum = 0;
-	for (int i = 0; i < k; i++) {
+	for (int i = 0; i < row; i++) {
 		int count = 0, prev = -1, j = 1;
 		int curr = *(*(arr + i) + 0);
 		while (curr != 0) {
@@ -502,7 +507,8 @@ int count_sawtooths_v1(int value) {///39
 	}
 	return count;
 }
-int count_sawtooths_v2(int arr[], int size) {///40
+template<typename T>
+T count_sawtooths_v2(T arr, int size) {///40
 	int count = 0;
 	for (int i = 0; i < size; i++) {
 		int  cur = *(arr + i), prev = cur;

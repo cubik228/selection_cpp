@@ -1,6 +1,6 @@
 ﻿  array.cpp
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(40,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(52,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(10,9): warning C4101: arr_2: неиспользованная локальная переменная
-D:\Project\c++_pr\selection_cpp\array\array\array_task.h(491): warning C4715: count_elements_v4: значение возвращается не при всех путях выполнения
+D:\Project\c++_pr\selection_cpp\array\array\help_func.h(94,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array.cpp(11,9): warning C4101: arr_2: неиспользованная локальная переменная
   array.vcxproj -> D:\Project\c++_pr\selection_cpp\array\x64\Debug\array.exe
