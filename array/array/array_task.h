@@ -1,14 +1,22 @@
 #pragma once
 #include "help_func.h"
 #include <algorithm>
-template<typename T>
-T sum_array( T arr,int size) ///1
-{
-	double sum = 0;
-	for (int i = 0; i < size; i++) {
-		sum += *(arr + i);
+namespace my_template {
+	template<class Iterator, class UnaryOperation>
+	void print_array(Iterator first, Iterator last, UnaryOperation up) {
+		for (; first != last; ++first)
+		{
+			up(*first);
+		}
 	}
-	return sum;
+	template<class Iterator, class UnaryOperation,typename T>
+	T sum_template(Iterator first, Iterator last,T result, UnaryOperation up) {
+		for (; first != last; ++first)
+		{
+			result = up(*first, result);
+		}
+		return result;
+	}
 }
 template<typename T>
 T average(T arr, int size) ///2
