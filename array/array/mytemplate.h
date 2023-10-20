@@ -16,4 +16,13 @@ namespace my_template {
 		}
 		return result;
 	}
+	template<class Iterator, class UnaryOperation, typename T>
+	T sum_template_break(Iterator first, Iterator last, T result, UnaryOperation up) {
+		for (; first != last; ++first)
+		{
+			result = up(*first, result);
+			break;
+		}
+		return result;
+	}
 }

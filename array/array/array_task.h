@@ -87,51 +87,44 @@ T checking_for_positive_numbers_v2(Iterator first, T last, T value)
 		return count;
 	});
 }
-
 template<typename T, class Iterator>///15
 T number_of_the_first_number_in_the_set_of_larger_K(Iterator first, T last,int number)
 {
-	return my_template::sum_template(first, first + last, 0, [&number](int a, double b) {
+	return my_template::sum_template_break(first, first + last, 0, [&number](int a, double b) {
 		if (a > number) {
 			std::cout<< a;
-			return 0;
+			b++;
 		}
-		return 1; ///todo
+		return b;
 	});
 }
-template<typename T>
-bool isIncreasingSequence(T arr, int size) {//16
-	for (int i = 0; i < size; i++) {
-		if (*(arr +i) >= *(arr + i + 1)) {
-			return false;
+template<typename T, class Iterator>///16
+T is_increasing_sequence(Iterator first, T last, int number) {
+	return my_template::sum_template(first, first + last, 0, [&number](double a, double b) {
+		if (a>number) {
+			b ++;
 		}
-	}
-	return true;
+		return b;
+	});
 }
-template<typename T>
-void elements_of_the_set_together_with_number_B(T arr, int size, int value) ///17
+template<typename T, class Iterator>///17
+void elements_of_the_set_together_with_number_B(Iterator first, T last, int number)
 {
-	bubbleSort(arr, size);
-	for (int i = 0; i < size; i++)
-	{
-		if (*(arr + i) < value) {
-			std::cout << value;
-		}
-	}
+	bubble_sort(first, last);
+	return my_template::print_array(first, first + last, [&number](int value) {std::cout << value <<number<<" "; });
 }
-template<typename T>
-void all_different_elements(T arr, int size, int value) {///18
-	bubbleSort(arr, size);
-	int j = 0;
-	for (int i = 0; i < size; ++i) {
-		if (i == 0 || *(arr + i) != *(arr + i- 1)) {
-			*(arr + j++) = *(arr + i);
+template<typename T, class Iterator>
+T all_different_elements(Iterator first, T last) {///18
+	bubble_sort(first, last);
+	return my_template::sum_template(first, first + last, 0, [&first](double a, int b) {
+		auto it = 0;
+		
+		if (it == *first || it != (it - 1)) {
+			it++;
+			std::cout << it << " ";///todo
 		}
-	}
-	size = j;
-	for (int i = 0; i < size; ++i) {
-		std::cout << *(arr + i) << " ";
-	}
+		return 0;
+	});
 }
 template<typename T>
 int less_than_its_left_neighbor(T arr,int size) {//19

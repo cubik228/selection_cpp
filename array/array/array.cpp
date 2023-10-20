@@ -8,7 +8,7 @@ int main()
 	int col= 5, row = 5;
 	const int size = 10;
 	int size3 = 8;
-	double arr[]{7,7,9,7,8,8,8,8};
+	double arr[]{1,7,9,7,8,8,8,7};
 	double arr_2[10][size];
 	int** arr_v2 = new int* [col];
 	for (int i = 0; i < col; i++) {
@@ -31,5 +31,8 @@ int main()
 	//sum_of_all_positive_even_numbers(arr,size3);
 	//checking_for_positive_numbers(arr,size3,2);
 	//std::cout<<checking_for_positive_numbers_v2(arr,size3,8);
-	std::cout<<number_of_the_first_number_in_the_set_of_larger_K(arr,size3,-19);
+	//std::cout<<number_of_the_first_number_in_the_set_of_larger_K(arr,size3,7);
+	//std::cout<<is_increasing_sequence(arr,size3,5);
+	//elements_of_the_set_together_with_number_B(arr ,size3,3);
+	all_different_elements(arr,size3);
 }

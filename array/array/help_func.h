@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 template <typename T>
-T bubbleSort(T arrForSort[], int SIZE)
+void bubble_sort(T arrForSort, int SIZE)
 {
 	for (int i = 0; i < SIZE - 1; i++)
 	{
@@ -16,10 +16,6 @@ T bubbleSort(T arrForSort[], int SIZE)
 		}
 
 	}
-	for (int i = 0; i < SIZE; i++) {
-		std::cout << arrForSort[i] << " ";
-	}
-	return 0;
 }
 ///********************************
 template <size_t N>
