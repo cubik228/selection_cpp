@@ -1,196 +1,103 @@
 #pragma once
 #include "help_func.h"
 #include <algorithm>
-namespace my_template {
-	template<class Iterator, class UnaryOperation>
-	void print_array(Iterator first, Iterator last, UnaryOperation up) {
-		for (; first != last; ++first)
-		{
-			up(*first);
-		}
-	}
-	template<class Iterator, class UnaryOperation,typename T>
-	T sum_template(Iterator first, Iterator last,T result, UnaryOperation up) {
-		for (; first != last; ++first)
-		{
-			result = up(*first, result);
-		}
+#include <cmath>
+#include "mytemplate.h"
+template<typename T,class Iterator>///1
+T sum(Iterator first, T last)
+{
+	return my_template::sum_template(first, first +last, 0, [](double a, double b) {return a + b; });
+}
+template<typename T, class Iterator>///2
+T product(Iterator first, T last)
+{
+	return my_template::sum_template(first, first+ last, 1, [](double a, double b) {return a * b; });
+}
+template<typename T, class Iterator>///3
+T average(Iterator first, T last) 
+{
+	return sum(first,last) / last;
+}
+template<class Iterator>///4
+void sum_and_product(Iterator first, int last) 
+{
+	std::cout << sum(first, last)<<std::endl;
+	std::cout << product(first,last);
+}
+template< typename T, class Iterator>///5
+void whole_parts_of_all_numbers(Iterator first, T last) {
+	return my_template::print_array(first, first + last, [](int value) {std::cout << value; });
+}
+template<typename T, class Iterator>///6
+void product_of_all_fractional_parts(Iterator first, T last,int result)
+{
+	return my_template::print_array(first, first + last, [&result](double value) {
+		std::cout << value - int(value) << std::endl;
+		result *= value - int(value);
 		return result;
-	}
+	});
 }
-template<typename T>
-T average(T arr, int size) ///2
+template<typename T, class Iterator>///7
+void sum_of_all_rounded_values(Iterator first, T last)
 {
-	double average = 0;
-	for (int i = 0; i < size; i++)
-	{
-		average += *(arr + i);
-	}
-	return average / size;
+	return my_template::print_array(first, first + last, [](int value) {std::cout << std::round(value); });
 }
-template<typename T>
-T arithmetic_mean(T arr, int size)///3
-{
-	double srznach = 1;
-	for (int i = 0; i < size; i++)
-	{
-		srznach += *(arr +i) / 2;
-	}
-	return srznach;
-}
-template<typename T>
-void sum_and_product(T arr, int size) ///4
-{
-	double sum = 0;
-	int proizv = 1;
-	for (int i = 0; i < size; i++)
-	{
-		sum += *(arr + i);
-		proizv *= *(arr + i);
-	}
-	std::cout << "sum= " << sum << std::endl << "proizv= " << proizv<<std::endl;
-}
-template<typename T>
-T whole_parts_of_all_numbers(T arr, int size) ///5
-{
-	double sum = 0;
-	for (int i = 0; i < size; i++)
-	{
-		double fraction = *(arr + i) - floor(*(arr + i));
-		*(arr + i) = *(arr + i) - fraction;
-		std::cout << *(arr + i) << " ";
-		sum += *(arr + i);
-	}
-	return sum;
-}
-template<typename T>
-T product_of_all_fractional_parts(T arr,int size)///6
-{
-	double tas = 1;
-	for (int i = 0; i < size; i++)
-	{
-		double dec = *(arr + i) - static_cast<int>(*(arr + i));
-		double integ = *(arr + i) - dec;
-		std::cout << *(arr + i) - integ << " ";
-		tas *= dec;
-	}
-	return tas;
-}
-template<typename T>
-T sum_of_all_rounded_values(T arr, int size) ///7
-{
-	double sum = 0;
-	for (int i = 0; i < size; i++)
-	{
-		double fraction = *(arr + i) - int(*(arr + i));
-		*(arr + i) = *(arr + i) - fraction;
-		std::cout << *(arr + i) << " ";
-		sum += std::round(*(arr + i));
-	}
-	return sum;
-}
-template<typename T>
-T output_even_numbers(T arr, int size) {
-	int count = 0;
-	for (int i = 0; i < size; i++) {
-		if (static_cast<int>(*(arr + i)) % 2 == 0) {
-			*(arr + i) *= 2;
-			std::cout << *(arr + i) << " ";
+template<typename T, class Iterator>///8 9 
+T output_even_numbers(Iterator first, T last, int number,int on_off){
+	return my_template::sum_template(first, first + last, 0, [ &number, &on_off](int value, double count) {
+		if (value % number == on_off) {
+			std::cout << value << " ";
 			count++;
 		}
-	}
-	return count;
+		return count;
+	});
+	
 }
-template<typename T>
-T output_odd_numbers(T arr, int size) ///9
+template<typename T, class Iterator>///10 11 
+bool checking_for_positive_numbers(Iterator first, T last,T value)
 {
-	double sum = 0;
-	int count = 0;
-	for (int i = 0; i < size; i++)
-	{
-		std::cout << *(arr + i) << " ";
+	return my_template::sum_template(first, first + last, 1, [&value](double a, double b) {
+		if (a > value) {
+			return true;
+		}
+		return false; 
+	});
+}
+template<typename T, class Iterator>///12
+void amount_of_numbers(Iterator first, T last,T count)
+{
+	return my_template::print_array(first, first + last, [&count](int value) {std::cout << count++; });
+}
+template<typename T, class Iterator>///13
+void sum_of_all_positive_even_numbers(Iterator first, T last) 
+{
+	return my_template::print_array(first, first + last, [](int value) {
+		if (value > 0 && value % 2 == 0) {
+			std::cout << value;
+		}
+	});
+}
+template<typename T, class Iterator>///14
+T checking_for_positive_numbers_v2(Iterator first, T last, T value)
+{
+	return my_template::sum_template(first, first + last, 0, [&value](double a, double count) {
+		if (a < value) {
+			count++;
+		}
+		return count;
+	});
+}
 
-		if (int(*(arr + i)) % 2 == 0) {
-			std::cout << i;
-			count++;
-		}
-	}
-	return count;
-}
-template<typename T>
-bool checking_for_positive_numbers(T arr, int size)///10
+template<typename T, class Iterator>///15
+T number_of_the_first_number_in_the_set_of_larger_K(Iterator first, T last,int number)
 {
-	for (int i = 0; i < size; i++)
-	{
-		if (*(arr + i) > 0)
-		{
-			return true;
+	return my_template::sum_template(first, first + last, 0, [&number](int a, double b) {
+		if (a > number) {
+			std::cout<< a;
+			return 0;
 		}
-	}
-	return false;
-}
-template<typename T>
-T checking_for_numbers_less_than_k(T arr, int size, int value) ///11
-{
-	for (int i = 0; i < size; i++)
-	{
-		if (*(arr + i) < value) {
-			return true;
-		}
-	}
-	return false;
-}
-template<typename T>
-T amount_of_numbers(T arr, int size)///12
-{
-	int count = 0;
-	for (int i = 1; i < size; i++)
-	{
-		if (*(arr + i) == 0) {
-			break;
-			count++;
-		}
-	}
-	return count;
-}
-template<typename T>
-bool sum_of_all_positive_even_numbers(T arr, int size) ///13
-{
-	double sum = 0;
-	for (int i = 0; i < size; i++)
-	{
-		if (int(*(arr + i)) > 0 && int(*(arr + i)) % 2 == 0) {
-			sum += *(arr + i);
-		}
-	}
-	std::cout << sum;
-	return false;
-}
-template<typename T>
-T number_of_numbers_in_set_smaller_K(T arr, int size, int value) ///14
-{
-	int mensh = 0;
-	for (int i = 0; i < size; i++)
-	{
-		if (*(arr + i) == 0) {
-			break;
-			if (*(arr + i) < value)
-				mensh++;
-		}
-	}
-	return mensh;
-}
-template<typename T>
-void number_of_the_first_number_in_the_set_of_larger_K(T arr, int size, int value) ///15
-{
-	double sum = 0;
-	for (int i = 0; i < size; i++)
-	{
-		if (*(arr + i) > value) {
-			std::cout << i;
-			break;
-		}
-	}
+		return 1; ///todo
+	});
 }
 template<typename T>
 bool isIncreasingSequence(T arr, int size) {//16

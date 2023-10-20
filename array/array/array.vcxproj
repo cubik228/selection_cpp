@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="array_task.h" />
     <ClInclude Include="help_func.h" />
+    <ClInclude Include="mytemplate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

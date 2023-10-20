@@ -1,0 +1,19 @@
+#pragma once
+#include<iostream>
+namespace my_template {
+	template<class Iterator, class UnaryOperation>
+	void print_array(Iterator first, Iterator last, UnaryOperation up) {
+		for (; first != last; ++first)
+		{
+			up(*first);
+		}
+	}
+	template<class Iterator, class UnaryOperation, typename T>
+	T sum_template(Iterator first, Iterator last, T result, UnaryOperation up) {
+		for (; first != last; ++first)
+		{
+			result = up(*first, result);
+		}
+		return result;
+	}
+}

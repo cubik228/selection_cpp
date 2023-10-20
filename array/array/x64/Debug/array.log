@@ -2,7 +2,19 @@
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(40,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(52,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(94,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(20,108): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(21,110): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\array.cpp(12,9): warning C4101: arr_2: неиспользованная локальная переменная
+D:\Project\c++_pr\selection_cpp\array\array\mytemplate.h(15,16): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\array_task.h(94,22): message : выполняется компиляция ссылки на экземпляр шаблон функции "T my_template::sum_template<Iterator,number_of_the_first_number_in_the_set_of_larger_K::<lambda_1>,int>(Iterator,Iterator,T,UnaryOperation)"
+          with
+          [
+              T=int,
+              Iterator=double *,
+              UnaryOperation=number_of_the_first_number_in_the_set_of_larger_K::<lambda_1>
+          ]
+D:\Project\c++_pr\selection_cpp\array\array\array.cpp(34,13): message : выполняется компиляция ссылки на экземпляр шаблон функции "T number_of_the_first_number_in_the_set_of_larger_K<int,double*>(Iterator,T,int)"
+          with
+          [
+              T=int,
+              Iterator=double *
+          ]
   array.vcxproj -> D:\Project\c++_pr\selection_cpp\array\x64\Debug\array.exe

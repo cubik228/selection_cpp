@@ -26,5 +26,8 @@
     <ClInclude Include="help_func.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="mytemplate.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
