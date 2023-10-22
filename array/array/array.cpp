@@ -1,14 +1,14 @@
 ﻿#include <iostream>
 #include "help_func.h"
 #include "array_task.h"
-
+#include "mytemplate.h"
 
 int main()
 {
 	int col= 5, row = 5;
 	const int size = 10;
-	int size3 = 8;
-	double arr[]{1,7,9,7,8,8,8,7};
+	double size3 = 8;
+	double arr[]{4,4,7,1,2,1,2,1};
 	double arr_2[10][size];
 	int** arr_v2 = new int* [col];
 	for (int i = 0; i < col; i++) {
@@ -34,5 +34,10 @@ int main()
 	//std::cout<<number_of_the_first_number_in_the_set_of_larger_K(arr,size3,7);
 	//std::cout<<is_increasing_sequence(arr,size3,5);
 	//elements_of_the_set_together_with_number_B(arr ,size3,3);
-	all_different_elements(arr,size3);
+	//std::cout<<all_different_elements(arr,arr + 8);
+	//less_than_its_left_neighbor(arr,arr + 8,0);
+	//less_than_its_rigth_neighbor(arr,arr + 8,0);
+	//std::cout<<checking_and_violating_descending_sequence(arr,arr +8,0);
+	//std::cout<<check_for_sequence_type(arr,arr + 8,0);
+	//std::cout<<sawtooth_check(arr,arr + 8,0);
 }

@@ -115,81 +115,83 @@ void elements_of_the_set_together_with_number_B(Iterator first, T last, int numb
 }
 template<typename T, class Iterator>
 T all_different_elements(Iterator first, T last) {///18
-	bubble_sort(first, last);
-	return my_template::sum_template(first, first + last, 0, [&first](double a, int b) {
-		auto it = 0;
-		
-		if (it == *first || it != (it - 1)) {
-			it++;
-			std::cout << it << " ";///todo
-		}
-		return 0;
-	});
+	bubble_sort(first, last - first);
 }
-template<typename T>
-int less_than_its_left_neighbor(T arr,int size) {//19
-	int count = 0;
-	for (int i = 1; i < size; i += 2)
+template<typename T, class Iterator>
+int less_than_its_left_neighbor(Iterator first, T last,  int count ) {//19
+	for (; first != last; ++first)
 	{
-		if (*(arr + i) < *(arr + i - 1))
+		if (*first < *(first - 1))
 		{
-			std::cout << *(arr + i) << std::endl;
+			std::cout << *first << std::endl;
 			count++;
 		}
 	}
 	return count;
 }
-template<typename T>
-T less_than_its_rigth_neighbor(T arr, int size) {//20
-	int count = 0;
-	for (int i = 0; i < size; i += 2)
+template<typename Iterator>
+int less_than_its_rigth_neighbor(Iterator first, Iterator last, int count ) {//20
+	
+	for (; first != last; ++first)
 	{
-		if (*(arr + i) > *(arr + i + 1))
+		if (*first < *(first + 1))
 		{
-			std::cout << *(arr + i) << std::endl;
+			std::cout << *first << std::endl;
 			count++;
 		}
 	}
 	return count;
 }
-template<typename T>
-int checking_and_violating_descending_sequence(T arr, int size) {//21
-	int count = 0;
-	for (int i = 0; i < size; i++)
-	{
-		if (*(arr + i) < *(arr + i + 1))
+template <class Iterator>
+bool checking_and_violating_descending_sequence(Iterator first, Iterator last,int count) {//21
+		int size = last - first;
+		for (;first != last; ++first)
 		{
-			count++;
-			std::cout << count << std::endl;
-			return 0;
+			if (*first < *(first+1))
+			{
+				count++;
+			}
 		}
-	}
-	return count;
+		if (count == size)
+		{
+			return true;
+		}
+		return false;
 }
-template<typename T>
-void check_for_sequence_type(T arr, int size) ///22
+template <class Iterator>
+int check_for_sequence_type(Iterator first, Iterator last,int count) ///22
 {
-	for (int i = 0; i < size - 1; i++) {
-		if ((*(arr + i) > *(arr + i + 1))) {
-			std::cout << "0";
+	int size = last - first;
+	for (;first != last; ++first) {
+		if (*first > *(first + 1)) {
+			count++;
+		}
+		if (*first < *(first + 1)) {
 			break;
 		}
-		std::cout << *(arr + i);
-		break;
 	}
+	if (size == count) {
+		return 0;
+	}
+	return count + 1;
 }
-template<typename T>
-T sawtooth_check(T arr, int size) {//23
-	int count = 0;
-	for (int i = 1; i < size; i++)
+template <class Iterator>
+int sawtooth_check(Iterator first, Iterator last, int count) {//23
+	int size = last - first;
+	for (;first != last; ++first)
 	{
-		if (*(arr + 1) < *(arr + i) && *(arr + i) > *(arr + i - 1) || *(arr + i) < *(arr + i + 1) && *(arr + i) < *(arr + i - 1))
+		if (*(first + 1) < *first && *first > *(first - 1) || *first < *(first + 1) && *first < *(first - 1))
 		{
 			count++;
-			std::cout << count << std::endl;
+		}
+		if (!(*(first + 1) < *first && *first > *(first - 1) || *first < *(first + 1) && *first < *(first - 1))) {
+			break;
 		}
 	}
-	return 0;
+	if (size == count) {
+		return 0;
+	}
+	return count + 1;
 }
 template<typename T>
  double sum_between_zeros( T arr,int size)///24

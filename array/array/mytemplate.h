@@ -25,4 +25,12 @@ namespace my_template {
 		}
 		return result;
 	}
+	template<class Iterator, class T>
+	T acumulate(Iterator first, Iterator last, T result) {
+		for (; first != last; ++first)
+		{
+			result += *first;
+		}
+		return result;
+	}
 }
