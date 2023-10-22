@@ -3,10 +3,4 @@ D:\Project\c++_pr\selection_cpp\array\array\help_func.h(36,12): warning C4244: �
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(48,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\help_func.h(90,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\array.cpp(12,9): warning C4101: arr_2: неиспользованная локальная переменная
-D:\Project\c++_pr\selection_cpp\array\array\array_task.h(180,11): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\array.cpp(42,13): message : выполняется компиляция ссылки на экземпляр шаблон функции "int sawtooth_check<double*>(Iterator,Iterator,int)"
-          with
-          [
-              Iterator=double *
-          ]
   array.vcxproj -> D:\Project\c++_pr\selection_cpp\array\x64\Debug\array.exe

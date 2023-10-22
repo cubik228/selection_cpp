@@ -3,48 +3,48 @@
 #include <algorithm>
 #include <cmath>
 #include "mytemplate.h"
-template<typename T,class Iterator>///1
-T sum(Iterator first, T last)
+template<class Iterator>///1
+double sum(Iterator first, Iterator last)
 {
-	return my_template::sum_template(first, first +last, 0, [](double a, double b) {return a + b; });
+	return my_template::sum_template(first,  last, 0, [](double a, double b) {return a + b; });
 }
-template<typename T, class Iterator>///2
-T product(Iterator first, T last)
+template< class Iterator>///2
+double product(Iterator first, Iterator last)
 {
-	return my_template::sum_template(first, first+ last, 1, [](double a, double b) {return a * b; });
+	return my_template::sum_template(first, last, 1, [](double a, double b) {return a * b; });
 }
-template<typename T, class Iterator>///3
-T average(Iterator first, T last) 
-{
-	return sum(first,last) / last;
-}
+//template< class Iterator>///3
+//double average(Iterator first, double last)
+//{
+//	return sum(first,last) / last;
+//}
 template<class Iterator>///4
-void sum_and_product(Iterator first, int last) 
+void sum_and_product(Iterator first, Iterator last)
 {
 	std::cout << sum(first, last)<<std::endl;
 	std::cout << product(first,last);
 }
-template< typename T, class Iterator>///5
-void whole_parts_of_all_numbers(Iterator first, T last) {
-	return my_template::print_array(first, first + last, [](int value) {std::cout << value; });
+template<  class Iterator>///5
+void whole_parts_of_all_numbers(Iterator first, Iterator last) {
+	return my_template::print_array(first,  last, [](int value) {std::cout << value; });
 }
-template<typename T, class Iterator>///6
-void product_of_all_fractional_parts(Iterator first, T last,int result)
+template< class Iterator>///6
+void product_of_all_fractional_parts(Iterator first, Iterator last,int result)
 {
-	return my_template::print_array(first, first + last, [&result](double value) {
+	return my_template::print_array(first,  last, [&result](double value) {
 		std::cout << value - int(value) << std::endl;
 		result *= value - int(value);
 		return result;
 	});
 }
-template<typename T, class Iterator>///7
-void sum_of_all_rounded_values(Iterator first, T last)
+template< class Iterator>///7
+void sum_of_all_rounded_values(Iterator first, Iterator last)
 {
-	return my_template::print_array(first, first + last, [](int value) {std::cout << std::round(value); });
+	return my_template::print_array(first,  last, [](int value) {std::cout << std::round(value); });
 }
-template<typename T, class Iterator>///8 9 
-T output_even_numbers(Iterator first, T last, int number,int on_off){
-	return my_template::sum_template(first, first + last, 0, [ &number, &on_off](int value, double count) {
+template< class Iterator>///8 9 
+double output_even_numbers(Iterator first, Iterator last, int number,int on_off){
+	return my_template::sum_template(first,  last, 0, [ &number, &on_off](int value, double count) {
 		if (value % number == on_off) {
 			std::cout << value << " ";
 			count++;
@@ -54,9 +54,9 @@ T output_even_numbers(Iterator first, T last, int number,int on_off){
 	
 }
 template<typename T, class Iterator>///10 11 
-bool checking_for_positive_numbers(Iterator first, T last,T value)
+bool checking_for_positive_numbers(Iterator first, Iterator last,T value)
 {
-	return my_template::sum_template(first, first + last, 1, [&value](double a, double b) {
+	return my_template::sum_template(first,  last, 1, [&value](double a, double b) {
 		if (a > value) {
 			return true;
 		}
@@ -64,23 +64,23 @@ bool checking_for_positive_numbers(Iterator first, T last,T value)
 	});
 }
 template<typename T, class Iterator>///12
-void amount_of_numbers(Iterator first, T last,T count)
+void amount_of_numbers(Iterator first, Iterator last,T count)
 {
-	return my_template::print_array(first, first + last, [&count](int value) {std::cout << count++; });
+	return my_template::print_array(first,  last, [&count](int value) {std::cout << count++; });
 }
-template<typename T, class Iterator>///13
-void sum_of_all_positive_even_numbers(Iterator first, T last) 
+template< class Iterator>///13
+void sum_of_all_positive_even_numbers(Iterator first, Iterator last) 
 {
-	return my_template::print_array(first, first + last, [](int value) {
+	return my_template::print_array(first,  last, [](int value) {
 		if (value > 0 && value % 2 == 0) {
 			std::cout << value;
 		}
 	});
 }
 template<typename T, class Iterator>///14
-T checking_for_positive_numbers_v2(Iterator first, T last, T value)
+T checking_for_positive_numbers_v2(Iterator first, Iterator last, T value)
 {
-	return my_template::sum_template(first, first + last, 0, [&value](double a, double count) {
+	return my_template::sum_template(first,  last, 0, [&value](double a, double count) {
 		if (a < value) {
 			count++;
 		}
@@ -88,9 +88,9 @@ T checking_for_positive_numbers_v2(Iterator first, T last, T value)
 	});
 }
 template<typename T, class Iterator>///15
-T number_of_the_first_number_in_the_set_of_larger_K(Iterator first, T last,int number)
+T number_of_the_first_number_in_the_set_of_larger_K(Iterator first, Iterator last,T number)
 {
-	return my_template::sum_template_break(first, first + last, 0, [&number](int a, double b) {
+	return my_template::sum_template_break(first,  last, 0, [&number](int a, double b) {
 		if (a > number) {
 			std::cout<< a;
 			b++;
@@ -98,27 +98,27 @@ T number_of_the_first_number_in_the_set_of_larger_K(Iterator first, T last,int n
 		return b;
 	});
 }
-template<typename T, class Iterator>///16
-T is_increasing_sequence(Iterator first, T last, int number) {
-	return my_template::sum_template(first, first + last, 0, [&number](double a, double b) {
+template< class Iterator>///16
+double is_increasing_sequence(Iterator first, Iterator last, int number) {
+	return my_template::sum_template(first,  last, 0, [&number](double a, double b) {
 		if (a>number) {
 			b ++;
 		}
 		return b;
 	});
 }
-template<typename T, class Iterator>///17
-void elements_of_the_set_together_with_number_B(Iterator first, T last, int number)
+template< class Iterator>///17
+void elements_of_the_set_together_with_number_B(Iterator first, Iterator last, int number)
 {
-	bubble_sort(first, last);
-	return my_template::print_array(first, first + last, [&number](int value) {std::cout << value <<number<<" "; });
+	bubble_sort(first, last - first);
+	return my_template::print_array(first,  last, [&number](int value) {std::cout << value <<number<<" "; });
 }
-template<typename T, class Iterator>
-T all_different_elements(Iterator first, T last) {///18
+template< class Iterator>///18
+void all_different_elements(Iterator first, Iterator last) {
 	bubble_sort(first, last - first);
 }
-template<typename T, class Iterator>
-int less_than_its_left_neighbor(Iterator first, T last,  int count ) {//19
+template< class Iterator>//19
+int less_than_its_left_neighbor(Iterator first, Iterator last,  int count ) {
 	for (; first != last; ++first)
 	{
 		if (*first < *(first - 1))
@@ -129,8 +129,8 @@ int less_than_its_left_neighbor(Iterator first, T last,  int count ) {//19
 	}
 	return count;
 }
-template<typename Iterator>
-int less_than_its_rigth_neighbor(Iterator first, Iterator last, int count ) {//20
+template<typename Iterator>//20
+int less_than_its_rigth_neighbor(Iterator first, Iterator last, int count ) {
 	
 	for (; first != last; ++first)
 	{
@@ -142,9 +142,8 @@ int less_than_its_rigth_neighbor(Iterator first, Iterator last, int count ) {//2
 	}
 	return count;
 }
-template <class Iterator>
-bool checking_and_violating_descending_sequence(Iterator first, Iterator last,int count) {//21
-		int size = last - first;
+template <class Iterator>//21
+bool checking_and_violating_descending_sequence(Iterator first, Iterator last,int count,int size) {
 		for (;first != last; ++first)
 		{
 			if (*first < *(first+1))
@@ -158,15 +157,14 @@ bool checking_and_violating_descending_sequence(Iterator first, Iterator last,in
 		}
 		return false;
 }
-template <class Iterator>
-int check_for_sequence_type(Iterator first, Iterator last,int count) ///22
+template <class Iterator>///22
+int check_for_sequence_type(Iterator first, Iterator last,int count,int size) 
 {
-	int size = last - first;
 	for (;first != last; ++first) {
 		if (*first > *(first + 1)) {
 			count++;
 		}
-		if (*first < *(first + 1)) {
+		if (!(*first > *(first + 1))) {
 			break;
 		}
 	}
@@ -175,9 +173,8 @@ int check_for_sequence_type(Iterator first, Iterator last,int count) ///22
 	}
 	return count + 1;
 }
-template <class Iterator>
-int sawtooth_check(Iterator first, Iterator last, int count) {//23
-	int size = last - first;
+template <class Iterator>//23
+int sawtooth_check(Iterator first, Iterator last, int count,int size) {
 	for (;first != last; ++first)
 	{
 		if (*(first + 1) < *first && *first > *(first - 1) || *first < *(first + 1) && *first < *(first - 1))
@@ -193,55 +190,33 @@ int sawtooth_check(Iterator first, Iterator last, int count) {//23
 	}
 	return count + 1;
 }
-template<typename T>
- double sum_between_zeros( T arr,int size)///24
-{
-	double sum = 0, last_zero = -1, second_last_zero = -1;
-	for (int i = size - 1; i >= 0; i--) {
-		if (*(arr + i) == 0) {
-			if (last_zero == -1)
-			{
-				last_zero = i;
-			}
-			else
-			{
-				second_last_zero = i;
+template <class Iterator> ///24
+double sum_between_zeros(Iterator first, Iterator last, double sum ,int count) {
+	for (; first != last; ++first) {
+		if (*first == 0) {
+			if (++count == 2) {
 				break;
 			}
 		}
-	}
-	if (second_last_zero == -1 || last_zero == -1) {
-		return -1;
-	}
-	if (last_zero == second_last_zero +1) {
-		return 0;
-	}
-	for (int i = second_last_zero + 1; i < last_zero; i++) {
-		sum += *(arr + i);
-	}
-	return sum;
-}
-template<typename T>
-int sum_between_zeros_v2(T arr, int size) ///25
-{
-	double sum = 0, first_zero = -1, last_zero = -1;
-	for (int i = 0; i < size; i++) {
-		if (*(arr + i) == 0) {
-			if (first_zero == -1) {
-				first_zero = i;
-			}
-			else {
-				last_zero = i;
-			}
+		else if (count == 1) {
+			sum += *first;
 		}
 	}
-	if (first_zero == -1 || last_zero == -1) {
-		return 0;
+	return count == 2 ? sum : -1;
+}
+template <class Iterator>///25
+double sum_between_zeros(Iterator first, Iterator last, double sum , int count) {
+	for (; first != last; ++first) {
+		if (*first == 0) {
+			if (++count == 2) {
+				break;
+			}
+		}
+		else if (count == 1) {
+			sum += *first;
+		}
 	}
-	for (int i = first_zero + 1; i < last_zero; i++) {
-		sum += *(arr + i);
-	}
-	return sum;
+	return count == 2 ? sum : 0;
 }
 template<typename T>
 void calculatePowers_v1(T arr,int size ,int value) { ///26
