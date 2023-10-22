@@ -40,4 +40,5 @@ int main()
 	//std::cout<<checking_and_violating_descending_sequence(arr,arr +8,0);
 	//std::cout<<check_for_sequence_type(arr,arr + 8,0);
 	//std::cout<<sawtooth_check(arr,arr + 8,0);
+	///
 }
