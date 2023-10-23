@@ -1,6 +1,6 @@
 ﻿  array.cpp
-D:\Project\c++_pr\selection_cpp\array\array\help_func.h(36,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\help_func.h(48,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Project\c++_pr\selection_cpp\array\array\help_func.h(90,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\help_func.h(42,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\help_func.h(54,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project\c++_pr\selection_cpp\array\array\help_func.h(96,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\Project\c++_pr\selection_cpp\array\array\array.cpp(12,9): warning C4101: arr_2: неиспользованная локальная переменная
   array.vcxproj -> D:\Project\c++_pr\selection_cpp\array\x64\Debug\array.exe

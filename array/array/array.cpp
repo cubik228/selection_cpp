@@ -38,5 +38,8 @@ int main()
 	//std::cout<<checking_and_violating_descending_sequence(arr,arr +8,0);
 	//std::cout<<check_for_sequence_type(arr,arr + 8,0);
 	//std::cout<<sawtooth_check(arr,arr + 8,0);
-	std::cout<<sum_between_zeros(arr,arr + 8,0,0);
+	//std::cout<<sum_between_zeros(arr,arr + 8,0,0);
+	//calculate_powers_v1(arr,arr + 8 ,2);
+	//calculate_powers_v2(arr,arr+8,0);
+	//calculate_powers_v3(arr,arr+8,0);
 }

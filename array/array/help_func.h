@@ -17,6 +17,12 @@ void bubble_sort(T arrForSort, int SIZE)
 
 	}
 }
+bool is_count_equal_to_size(int count, int size) {
+	return count == size;
+}
+bool is_count_not_equal_to_size(int count, int size) {
+	return count != size;
+}
 ///********************************
 template <size_t N>
 void print_array(double(&arr)[N]) {

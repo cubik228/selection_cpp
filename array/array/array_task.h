@@ -151,10 +151,7 @@ bool checking_and_violating_descending_sequence(Iterator first, Iterator last,in
 				count++;
 			}
 		}
-		if (count == size)
-		{
-			return true;
-		}
+		is_count_not_equal_to_size(count, size);
 		return false;
 }
 template <class Iterator>///22
@@ -168,9 +165,7 @@ int check_for_sequence_type(Iterator first, Iterator last,int count,int size)
 			break;
 		}
 	}
-	if (size == count) {
-		return 0;
-	}
+	is_count_equal_to_size(count, size);
 	return count + 1;
 }
 template <class Iterator>//23
@@ -185,9 +180,7 @@ int sawtooth_check(Iterator first, Iterator last, int count,int size) {
 			break;
 		}
 	}
-	if (size == count) {
-		return 0;
-	}
+	is_count_equal_to_size(count, size);
 	return count + 1;
 }
 template <class Iterator> ///24
@@ -205,7 +198,7 @@ double sum_between_zeros(Iterator first, Iterator last, double sum ,int count) {
 	return count == 2 ? sum : -1;
 }
 template <class Iterator>///25
-double sum_between_zeros(Iterator first, Iterator last, double sum , int count) {
+double sum_between_zeros_v2(Iterator first, Iterator last, double sum , int count) {
 	for (; first != last; ++first) {
 		if (*first == 0) {
 			if (++count == 2) {
@@ -218,26 +211,17 @@ double sum_between_zeros(Iterator first, Iterator last, double sum , int count) 
 	}
 	return count == 2 ? sum : 0;
 }
-template<typename T>
-void calculatePowers_v1(T arr,int size ,int value) { ///26
-	for (int i = 0; i < size; i++) {
-		double result = pow(*(arr +i), value);
-		std::cout << "A" << i + 1 << "^" << value << " = " << result << std::endl;
-	}
+template <class Iterator>///26
+void calculate_powers_v1(Iterator first,Iterator last ,int value) { 
+	return my_template::print_array(first, last, [&value](int value_arr) {std::cout<<std::pow(value_arr, value);});
 }
-template<typename T>
-void calculatePowers_v2(T arr,int size ){///27
-	for (int i = 0; i < size; i++) {
-			*(arr + i ) = pow(*(arr + i), i);
-			std::cout  << *(arr + i) << std::endl;
-	}
+template <class Iterator>///27
+void calculate_powers_v2(Iterator first, Iterator last,int count){
+	return my_template::print_array(first, last, [&count](int value_arr) {count++;std::cout<<std::pow(value_arr, count); });
 }
-template<typename T>
-void calculatePowers(T arr,int size) {///28
-	for (int i = 0; i < size; i++) {
-		 *(arr + i) = pow(*(arr + i), size - i);
-		std::cout << *(arr + i) << std::endl;
-	}
+template <class Iterator>///28
+void calculate_powers_v3(Iterator first, Iterator last,int count) {
+	return my_template::print_array(first, last, [&count, &first, &last](int value_arr) {count++;std::cout << std::pow(value_arr, ((last - first) - count));});
 }
 template<typename T>
 double calculateTotalSum(T** arr,int value, int N) {///29
